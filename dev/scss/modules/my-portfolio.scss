@@ -1,0 +1,48 @@
+.my-portfolio {
+    @media screen and (min-width: 1440px) {
+        padding-left: 327/2000*100%;
+        padding-right: 327/2000*100%;
+    }
+    @media screen and (min-width: 1024px) {
+        padding-left: 327/2000*100% / 2;
+        padding-right: 327/2000*100% / 2;
+    }
+    @media screen and (min-width: 768px) {
+        padding-left: 327/2000*100% / 4;
+        padding-right: 327/2000*100% / 4;
+    }
+    padding-left: 327/2000*100% / 4;
+    padding-right: 327/2000*100% / 4;
+}
+
+.my-portflio__headline {
+    margin-top: 106px;
+}
+
+.my-portfolio__nav {
+    max-width: 409px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto auto;
+    margin-top: 212px; 
+}
+
+.my-portfolio__content {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    overflow: hidden;
+    margin-bottom: 57px;
+    @media screen and (max-width: 425px) {
+        flex-direction: column;
+    }
+
+}
+
+.my-portfolio__watch-button {
+    margin: auto auto;
+    display: block;
+    overflow: hidden;
+}

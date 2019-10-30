@@ -1,0 +1,77 @@
+.about-me {
+    padding: {
+        top: 236px;
+        left: 322/1920*100% / 6;
+        right: 322/1920*100% / 6;
+        bottom: 233px
+    }
+    @media screen and (min-width: 1024px) {
+        padding: {
+            left: 322/1920*100%;
+            right: 322/1920*100%;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        padding: {
+            left: 322/1920*100%/ 1.5;
+            right: 322/1920*100%/ 1.5;
+        }
+    }
+}
+.about-me:after {
+	content: ".";
+	visibility: hidden;
+	display	: block;
+	height: 0;
+	clear: both;
+}
+
+.about-me__headline {
+    margin-bottom: 132px;
+}
+
+.about-me__paragraph {
+    margin-bottom: 20px;
+    float: right;
+    width: 35%;
+    clear: right;
+    @media screen and (max-width: 1024px) {
+        width: 40%;
+    }
+    @media screen and (max-width: 768px) {
+        width: 45%;
+    }
+    @media screen and (max-width: 425px) {
+        float: none;
+        width: 100%;
+    }
+}
+.about-me__paragraph:first-child {
+    margin-top: 15px;
+}
+.about-me__paragraph:last-child {
+    margin: 0
+}
+
+.about-me__image {
+    float: left;
+    width: 50%;
+    @media screen and (max-width: 425px) {
+        width: 100%;
+        margin-bottom: 40px;
+        float: none;
+    }
+}
+
+.about-me__button {
+    float: right;
+    margin-top: 20px;
+    clear: right;
+    @media screen and (max-width: 768px) {
+        float: none;
+        clear: both;
+        margin: auto auto;
+        display: block;
+        margin-top: 50px;
+    }
+}
