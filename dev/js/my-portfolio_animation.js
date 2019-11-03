@@ -46,7 +46,7 @@ function show_all_sections() {
                 elem.style.display = 'block'
                 setTimeout(() => {
                     elem.style.opacity = '1'
-                    if (window.matchMedia("(max-width: 425px)").matches){
+                    if (window.matchMedia('(max-width: 425px)').matches){
                         elem.style.width = '100%';
                     }else elem.style.width = '30%';
                 }, 100)
