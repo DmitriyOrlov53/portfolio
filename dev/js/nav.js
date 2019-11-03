@@ -3,6 +3,7 @@ var navSourceTop = nav.getBoundingClientRect().top + window.scrollY;
 var nav__menu = document.getElementsByClassName('nav__mobile-menu')[0];
 var nav__link = document.getElementsByClassName('nav__link');
 var nav__links = document.getElementsByClassName('nav__links')[0];
+var form__data = document.getElementsByClassName('form__data')
 
 
 window.onscroll = function() {
@@ -18,6 +19,9 @@ if (window.matchMedia('(max-width: 425px)').matches) {
     nav__menu.addEventListener('click', toggle_menu);
     for (i = 0; i < nav__link.length; i++) {
         nav__link[i].addEventListener('click', hide_menu)
+    }
+    for (i = 0; i < form__data.length; i++) {
+        form__data[i].addEventListener('click', hide_menu)
     }
 }
 
