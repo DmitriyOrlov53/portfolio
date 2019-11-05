@@ -1,7 +1,7 @@
 var nav = document.getElementsByClassName('nav')[0];
 var navSourceTop = nav.getBoundingClientRect().top + window.scrollY;
 var nav__menu = document.getElementsByClassName('nav__mobile-menu')[0];
-var nav__link = document.getElementsByClassName('nav__link');
+var nav__link = document.querySelectorAll('nav__link a')
 var nav__links = document.getElementsByClassName('nav__links')[0];
 var form__data = document.getElementsByClassName('form__data')
 
