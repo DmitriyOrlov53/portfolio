@@ -3,23 +3,23 @@
     padding: 0;
 }
 
+$size: 16px;
+
 html {
     font-size: 8px;
-    @media screen and (min-width: 375px) {
+    @media screen and (min-width: 425px) {
         font-size: 10px;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
         font-size: 12px;
     }
-    @media screen and (min-width: 1024px) {
-        font-size: 14px;
+    @media screen and (min-width: 2560px) {
+        font-size: 22px;
     }
-    @media screen and (min-width: 1440px) {
-        font-size: 16px;
+    @media screen and (min-width: 4096px) {
+        font-size: 28px;
     }
 }
-
-
 @font-face {
     font-family: 'Roboto Light';
     src: url('../fonts/Roboto/Roboto-Light.ttf')
@@ -37,17 +37,26 @@ html {
     src: url('../fonts/Helvetica/HelveticaNeueLTStd\ Lt.otf')
 }
 
+@import './modules/columns.scss';
+
 @import './modules/headline.scss';
 @import './modules/paragraph.scss';
-@import './modules/header.scss';
 @import './modules/section-logo.scss';
+@import './modules/button.scss';
+@import './modules/input.scss';
+@import './modules/portfolio-card.scss';
+
+
+@import './modules/about-me.scss';
+
+@import './modules/header.scss';
 @import './modules/nav.scss';
 @import './modules/advantages.scss';
-@import './modules/about-me.scss';
-@import './modules/button.scss';
+
+
 @import './modules/my-skills.scss';
 @import './modules/my-portfolio.scss';
-@import './modules/portfolio-card.scss';
+
 @import './modules/contact.scss';
-@import './modules/form.scss';
+
 @import './modules/footer.scss';

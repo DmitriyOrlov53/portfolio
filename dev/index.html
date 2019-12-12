@@ -5,384 +5,249 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Free лансер</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link async rel="stylesheet" type="text/css" href="styles.css">
     <script src="./script.js" defer></script>
 </head>
 <body>
     <a id="home"></a>
-    <header class="header">
-        <h1 class="
-                    header__headline
-                    headline
-                    headline_font-size_90
-                    headline_align_center
-        ">
+    <header class="root header">
+        <h1 class=" headline headline_font-size_90 headline_align_center header__headline">
             <span class="headline__white">Free <span class="headline__purple">лансер</span>.</span>
         </h1>
-        <h2 class="
-                    header__sub-headline
-                    headline
-                    headline_font-size_48
-                    headline_align_center
-        ">
-            <span class="headline__white">Привет. Есть идея?</span>
-            <p class="headline__paragraph headline__white">Я фронт-энд web-разработчик и  тот, кто их сможет выполнить</p>
+        <h2 class="column_8 headline headline_font-size_4 header__sub-headline">
+            <span class="center headline__white headline_align_center">Привет. Есть идея?</span>
+            <p class="headline__paragraph headline_align_center headline__white">Я фронт-энд web-разработчик и  тот, кто их сможет выполнить</p>
         </h2>
-        <div class="header__icons-container">
-            <a class="section-logo section-logo_focused header__portfolio-icon" href="#portfolio">
+        <section class="column_5 responsive nocolumn">
+            <a class="column_6 notresponsive section-logo section-logo_focused" href="#portfolio">
                 <img class="section-logo__icon" src="./icons/portfolio.svg">
                 <h4 class="section-logo__headline">Портфолио</h4>
             </a>
-            <a href="#about-me" class="section-logo section-logo_focused header__about-icon">
+            <a class="column_6 notresponsive section-logo section-logo_focused" href="#about-me">
                 <img class="section-logo__icon" src="./icons/about.svg">
                 <h4 class="section-logo__headline">Обо мне</h4>
             </a>
-            <a href="#" class="section-logo section-logo_focused header__blog-icon">
+            <a href="#" class="column_6 notresponsive section-logo section-logo_focused">
                 <img class="section-logo__icon" src="./icons/blog.svg">
                 <h4 class="section-logo__headline">Блог</h4>
             </a>
-            <a href="#contact" class="section-logo section-logo_focused header__contact-icon">
+            <a class="column_6 notresponsive section-logo section-logo_focused"  href="#contact">
                 <img class="section-logo__icon" src="./icons/contact.svg">
                 <h4 class="section-logo__headline">Контакт</h4>
             </a>
-        </div>
+        </section>
     </header>
-    <nav class="nav">
-        <h1 class="
-        headline
-        headline_font-size_30
-        ">
-            <span class="headline__gray">Free <span class="headline__purple">лансер</span>.</span>
-        </h1>
+    <nav class="root nav">
+        <section class="column_12">
+            <h1 class="column_6 headline headline_font-size_30">
+                <span class="headline__gray">Free <span class="headline__purple">лансер</span>.</span>
+            </h1>
             <button class="nav__mobile-menu button"></button>
-        <ul class="nav__links">
-            <li class="nav__link"><a href="#home">HOME</a></li>
-            <li class="nav__link"><a href="#about-me">Обо мне</a></li>
-            <li class="nav__link"><a href="#portfolio">Портфолио</a></li>
-            <li class="nav__link"><a href="#">Блог</a></li>
-            <li class="nav__link"><a href="#contact">Контакт</a></li>
-        </ul>
-    </nav>
-    <article class="advantages">
-        <section class="advantages__statement">
-            <div class="section-logo advantages__icon">
-                <img src="./icons/heart.svg" class="section-logo__icon">
+            <div class="column_6 nav__links">
+                <span class="nav__link"><a href="#home">HOME</a></span>
+                <span class="nav__link"><a href="#about-me">Обо мне</a></span>
+                <span class="nav__link"><a href="#portfolio">Портфолио</a></span>
+                <span class="nav__link"><a href="#">Блог</a></span>
+                <span class="nav__link"><a href="#contact">Контакт</a></span>
             </div>
-                <h4 class="
-                    headline 
-                    headline__gray 
-                    headline_font-size_24 
-                    advantages__headline"
-                >
+        </section>
+    </nav>
+    <article class="root advantages">
+        <section class="column_12 responsive">
+            <section class="column_3 advantages__statement">
+                <div class="section-logo advantages__icon">
+                    <img src="./icons/heart.svg" class="section-logo__icon">
+                </div>
+                <h4 class="headline headline__gray headline_align_center headline_font-size_24">
                     Сделано с любовью
                 </h4>
-                <p class="advantages__paragraph paragraph paragraph_align_center">
+                <p class="center advantages__paragraph paragraph paragraph_align_center">
                     Каждый выполненный проект &mdash; результат кропотливой работы.
                     Свою долю внимания получает любая незначительная мелочь
                 </p>
-        </section>
-        <section class="advantages__statement">
-            <div class="section-logo advantages__icon">
-                <img src="./icons/diamond.svg" class="section-logo__icon">
-            </div>
-            <h4 class="
-                headline 
-                headline__gray 
-                headline_font-size_24 
-                advantages__headline"
-            >
-            Чисто и </br>
-            современно
-            </h4>
-            <p class="advantages__paragraph paragraph paragraph_align_center">
-                В разработке используются современные средства и инструменты, 
-                чтобы достичь максимального качества конечного продукта
-            </p>
-        </section>
-        <section class="advantages__statement">
-            <div class="section-logo advantages__icon">
-                <img src="./icons/phone.svg" class="section-logo__icon">
-            </div>
-            <h4 class="
-                headline 
-                headline__gray 
-                headline_font-size_24 
-                advantages__headline"
-            >
-            Полная </br>
-            адаптивность
-            </h4>
-            <p class="advantages__paragraph paragraph paragraph_align_center">
-                Не беспокойтесь об этом.
-                Ваш design будет хорошо выглядеть на экране любого формата
-            </p>
+            </section>
+            <section class="column_3 advantages__statement">
+                <div class="section-logo advantages__icon">
+                    <img src="./icons/diamond.svg" class="section-logo__icon">
+                </div>
+                <h4 class="headline headline__gray headline_font-size_24 headline_align_center">
+                    Чисто исовременно
+                </h4>
+                <p class="center advantages__paragraph paragraph paragraph_align_center">
+                    В разработке используются современные средства и инструменты, 
+                    чтобы достичь максимального качества конечного продукта
+                </p>
+            </section>
+                <section class="column_3 advantages__statement">
+                    <div class="section-logo advantages__icon">
+                        <img src="./icons/phone.svg" class="section-logo__icon">
+                    </div>
+                    <h4 class="headline headline__gray headline_align_center headline_font-size_24">
+                        Полная адаптивность
+                </h4>
+                <p class="advantages__paragraph paragraph paragraph_align_center">
+                    Не беспокойтесь об этом.
+                    Ваш design будет хорошо выглядеть на экране любого формата
+                </p>
+            </section>
         </section>
     </article>
     <a id="about-me"></a>
-    <article class="about-me">
-        <h2 class="
-            headline 
-            headline_font-size_48
-            headline_align_center
-            about-me__headline
-        ">
+    <article class="root about-me">
+        <h2 class="headline headline_font-size_48 headline_align_center about-me__headline">
             <div class="headline__angles">
             <span class="headline__gray">Обо</span>
             <span class="headline__purple">мне</span>
             </div>
         </h2>
-        <img src="./pictures/devices.svg" class="about-me__image ">
-        <p class="paragraph about-me__paragraph">
-            Я веб-разработчик уровня junior.
-            Практического опыта немного,
-            но это мне не помешало сверстать этот сайт.
-            Дальше будет больше, возможно благодаря вам.
-        </p>
-        <p class="paragraph about-me__paragraph">
-            В данный момент я учусь на программиста и
-            параллельно постигаю web-разрботку. Я не стою
-            на месте и постоянно пытаюсь чему-то научиться
-        </p>
-        <button class="button button_size_big about-me__button">
-            Узнать больше
-        </button>
+        <section class="column_12 responsive">
+            <img src="./pictures/devices.svg" class="column_7">
+            <section class="column_5 responsive">
+                <p class="paragraph about-me__paragraph">
+                    Я веб-разработчик уровня junior.
+                    Практического опыта немного,
+                    но это мне не помешало сверстать этот сайт.
+                    Дальше будет больше, возможно благодаря вам.
+                </p>
+                <p class="paragraph about-me__paragraph">
+                    В данный момент я учусь на программиста и
+                    параллельно постигаю web-разрботку. Я не стою
+                    на месте и постоянно пытаюсь чему-то научиться
+                </p>
+                <button class="button button_size_big about-me__button">
+                    Узнать больше
+                </button>
+            </section>
+        </section>
     </article>
-    <article class="my-skills">
-        <h2 class="
-            headline
-            headline_font-size_48
-            headline_align_center
-        ">
+    <article class="root my-skills">
+        <h2 class="headline headline_font-size_48 headline_align_center my-skills__headline">
             <div class="headline__angles">
                 <span class="headline__gray">Мои</span>
                 <span class="headline__purple">навыки</span>
             </div>
         </h2>
-            <section class="my-skills__values">
-                <div class="my-skills__value">
-                    <h3 class="
-                                headline
-                                headline_font-size_24
-                                my-skills__skill-name
-                    ">HTML/CSS(SCSS)</h3>
-                    <div class="
-                                my-skills__progress-bar
-                                my-skills__progress-bar_html-css
-                    "></div>
-                </div>
-                <div class="my-skills__value">
-                    <h3 class="
-                                headline
-                                headline_font-size_24
-                                my-skills__skill-name
-                    ">Vue</h3>
-                    <div class="
-                        my-skills__progress-bar
-                        my-skills__progress-bar_vue
-                    "></div>
-                </div>
-                <div class="my-skills__value">
-                    <h3 class="
-                        headline
-                        headline_font-size_24
-                        my-skills__skill-name
-                    ">Git</h3>
-                    <div class="
-                        my-skills__progress-bar
-                        my-skills__progress-bar_git
-                    "></div>
-                    </div>
-                    <div class="my-skills__value">
-                        <h3 class="
-                        headline
-                        headline_font-size_24
-                        my-skills__skill-name
-                    ">JS</h3>
-                    <div class="
-                        my-skills__progress-bar
-                        my-skills__progress-bar_js
-                    "></div>
-                </div>
-                <div class="my-skills__value">
-                        <h3 class="
-                        headline
-                        headline_font-size_24
-                        my-skills__skill-name
-                    ">Webpack</h3>
-                    <div class="
-                        my-skills__progress-bar
-                        my-skills__progress-bar_webpack
-                    "></div>
-                </div>    
-            </section>
+        <section class="column_12 responsive">
+            <div class="column_5 my-skills__value">
+                <h3 class="headline headline_font-size_24 my-skills__skill-name">HTML/CSS(SCSS)</h3>
+                <div class="my-skills__progress-bar my-skills__progress-bar_html-css"></div>
+            </div>
+            <div class="column_5 my-skills__value">
+                <h3 class="headline headline_font-size_24 my-skills__skill-name">Vue</h3>
+                <div class="my-skills__progress-bar my-skills__progress-bar_vue"></div>
+            </div>
+            <div class="column_5 my-skills__value">
+                <h3 class="headline headline_font-size_24 my-skills__skill-name">Git</h3>
+                <div class="my-skills__progress-bar my-skills__progress-bar_git"></div>
+            </div>
+            <div class="column_5 my-skills__value">
+                <h3 class="headline headline_font-size_24 my-skills__skill-name">JS</h3>
+                <div class="my-skills__progress-bar my-skills__progress-bar_js"></div>
+            </div>
+            <div class="column_5 my-skills__value">
+                <h3 class="headline headline_font-size_24 my-skills__skill-name">Webpack</h3>
+                <div class="my-skills__progress-bar my-skills__progress-bar_webpack"></div>
+            </div>
+        </section>
     </article>
     <a id="portfolio"></a>
-    <article class="my-portfolio">
-        <h2 class="
-        headline
-        headline_font-size_48
-        headline_align_center
-        my-portflio__headline
-        ">
+    <article class="root my-portfolio">
+        <h2 class="headline headline_font-size_48 headline_align_center my-portflio__headline">
             <div class="headline__angles">
                 <span class="headline__gray">Моё</span>
                 <span class="headline__purple">портфолио</span>
             </div>
         </h2>
-        <nav class="my-portfolio__nav">
+        <nav class="column_9 nowrap">
             <button class="button button_size_small my-portfolio__nav-button button_cheked all">ALL</button>
             <button class="button button_size_small my-portfolio__nav-button button_focused sites">SITES</button>
             <button class="button button_size_small my-portfolio__nav-button button_focused apps">APPs</button>
         </nav>
-        <section class="my-portfolio__content">
-            <div class="portfolio-card sites">
+        <section class="column_12 responsive my-portfolio__content">
+            <div class="column_4 portfolio-card sites">
                 <img class="portfolio-card__banner" src="./pictures/web.jpg">
-                    <h6 class="
-                        headline
-                        headline__dark-gray
-                        headline_align_center
-                        headline_font-size_20
-                    ">
+                    <h6 class="headline headline__dark-gray headline_align_center headline_font-size_20">
                         Пока здесь ничего нет
                     </h6>    
-                    <p class="
-                            paragraph
-                            paragraph_align_center
-                            portfolio-card__tag 
-                    ">
+                    <p class="paragraph paragraph_align_center portfolio-card__tag">
                         Sites
                     </p>
             </div>
-            <div class="portfolio-card sites">
+            <div class="column_4 portfolio-card sites">
                 <img class="portfolio-card__banner" src="./pictures/web.jpg">
-                    <h6 class="
-                        headline
-                        headline__dark-gray
-                        headline_align_center
-                        headline_font-size_20
-                    ">
+                    <h6 class="headline headline__dark-gray headline_align_center headline_font-size_20">
                         Пока здесь ничего нет
-                    </h6>    
-                    <p class="
-                            paragraph
-                            paragraph_align_center
-                            portfolio-card__tag 
-                    ">
+                    </h6>
+                    <p class="paragraph paragraph_align_center portfolio-card__tag ">
                         Sites
                     </p>
             </div>
-            <div class="portfolio-card apps">
+            <div class="column_4 portfolio-card apps">
                 <img class="portfolio-card__banner" src="./pictures/apps.jpg">
-                <h6 class="
-                    headline
-                    headline__dark-gray
-                    headline_align_center
-                    headline_font-size_20
-                ">
+                <h6 class="headline headline__dark-gray headline_align_center headline_font-size_20">
                     И здесь пока ничего нет
                 </h6>    
-                <p class="
-                        paragraph
-                        paragraph_align_center
-                        portfolio-card__tag 
-                ">
+                <p class="paragraph paragraph_align_center portfolio-card__tag">
                     Apps
                 </p>
             </div>
-            <div class="portfolio-card sites">
+            <div class="column_4 portfolio-card sites">
                 <img class="portfolio-card__banner" src="./pictures/web.jpg">
-                    <h6 class="
-                        headline
-                        headline__dark-gray
-                        headline_align_center
-                        headline_font-size_20
-                    ">
-                        Пока здесь ничего нет
-                    </h6>    
-                    <p class="
-                            paragraph
-                            paragraph_align_center
-                            portfolio-card__tag 
-                    ">
-                        Sites
-                    </p>
+                <h6 class="headline headline__dark-gray headline_align_center headline_font-size_20">
+                    Пока здесь ничего нет
+                </h6>    
+                <p class="paragraph paragraph_align_center portfolio-card__tag">
+                    Sites
+                </p>
             </div>
-            <div class="portfolio-card apps">
-                <img class="portfolio-card__banner" src="./pictures/apps.jpg">
-                <h6 class="
-                    headline
-                    headline__dark-gray
-                    headline_align_center
-                    headline_font-size_20
-                ">
+            <div class="column_4 portfolio-card apps">
+                <img class="column_4 portfolio-card__banner" src="./pictures/apps.jpg">
+                <h6 class="headline headline__dark-gray headline_align_center headline_font-size_20">
                     И здесь пока ничего нет
                 </h6>    
-                <p class="
-                        paragraph
-                        paragraph_align_center
-                        portfolio-card__tag 
-                ">
+                <p class="paragraph paragraph_align_center portfolio-card__tag ">
                     Apps
                 </p>
             </div>
-            <div class="portfolio-card apps">
+            <div class="column_4 portfolio-card apps">
                 <img class="portfolio-card__banner" src="./pictures/apps.jpg">
-                <h6 class="
-                    headline
-                    headline__dark-gray
-                    headline_align_center
-                    headline_font-size_20
-                ">
+                <h6 class="headline headline__dark-gray headline_align_center headline_font-size_20">
                     И здесь пока ничего нет
                 </h6>    
-                <p class="
-                        paragraph
-                        paragraph_align_center
-                        portfolio-card__tag 
-                ">
+                <p class="paragraph paragraph_align_center portfolio-card__tag ">
                     Apps
                 </p>
             </div>
         </section>
-        <button class="
-                    my-portfolio__watch-button
-                    button
-                    button_size_big
-        ">
+        <button class="my-portfolio__watch-button button button_size_big">
             Смотреть больше
         </button>
     </article>
     <a id="contact"></a>
-    <article class="contact">
-        <h2 class="
-        headline
-        headline_font-size_48
-        headline_align_center
-        contact__headline
-        ">
+    <article class="root contact">
+        <h2 class="headline headline_font-size_48 headline_align_center contact__headline">
             <div class="headline__angles">
                 <span class="headline__gray">Связаться</span>
                 <span class="headline__purple">со мной</span>
             </div>
         </h2>
-        <form class="form contact__send-email" 
-                method="GET" 
-                enctype="text/plain"
-                accept-charset="utf-8"
-                target="blank"
-                action="mailto:orlov.dmitriy2303@outlook.com">
-            <input type="text" name="subject" placeholder="Тема вашего письма" class="form__data">
-            <textarea name="body" placeholder="Ваше сообщение" class="form__data form__text"></textarea>
-            <button class="button button_size_big">Отправить письмо</button>
-        </form>
-        <p class="paragraph contact__paragraph">
-            Вы можете использовать электронную почту через эту форму, если у Вас установлен почтовый клиент. Или можете свяязаться
-            со мной через соцсети и месседжеры.
-        </p>
-        <section class="contact__social">
-            <a href="https://t.me/LoremIpsum53" target="blank"><img src="./icons/social/telegram.svg"></a>
-            <a href="https://vk.com/lrmpsm" target="blank"><img src="./icons/social/vk.svg"></a>
-            <a href="https://www.instagram.com/lrmpsm53/" target="blank"><img src="./icons/social/instagram.svg"></a>
+        <section class="column_12">
+            <form class="column_6 responsive" method="POST" enctype="text/plain" accept-charset="utf-8" target="blank" action="mailto:orlov.dmitriy2303@outlook.com">
+                <input type="text" name="subject" placeholder="Тема вашего письма" class="input contact__input">
+                <textarea name="body" placeholder="Ваше сообщение" class="input input_text contact__input"></textarea>
+                <button class="button button_size_big">Отправить письмо</button>
+            </form>
+            <section class="column_6 responsive">
+                <p class="column_12 paragraph contact__paragraph">    
+                    Вы можете использовать электронную почту через эту форму, если у Вас установлен почтовый клиент. Или можете свяязаться
+                    со мной через соцсети и месседжеры.
+                </p>
+                <section class="column_4 contact__social">
+                    <a href="https://t.me/LoremIpsum53" target="blank"><img src="./icons/social/telegram.svg"></a>
+                    <a href="https://vk.com/lrmpsm" target="blank"><img src="./icons/social/vk.svg"></a>
+                    <a href="https://www.instagram.com/lrmpsm53/" target="blank"><img src="./icons/social/instagram.svg"></a>
+                </section>
+            </section>
         </section>
     </article>
     <footer class="footer">

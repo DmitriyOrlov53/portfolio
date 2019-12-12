@@ -3,17 +3,9 @@
     font-family: Roboto Light;
     font-size: 1rem;
     overflow: hidden;
-    line-height: 30/16*1rem;
-    @media screen and (max-width: 425px) {
-        font-size: 2rem;
-        line-height: 30/16*2rem;
-    }
-    @media screen and (max-width: 768px) {
-        font-size: 1.5rem;
-        line-height: 30/16*1.5rem;
-    }
+    line-height: 30px;
 }
 
 .paragraph_align_center {
-    text-align: center
+    text-align: center;
 }

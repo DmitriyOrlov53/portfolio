@@ -1,25 +1,14 @@
 .nav {
-    padding: {
-        left: 216px/1920px*100%;
-        right: 216px/1920px*100%;
-    };
-    box-sizing: border-box;
-    min-height: 144px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
     transition: all 1s ease-in-out;
-    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0.97;
+    background-color: #ffffff;
 }
 
 .nav__link {
-    display: inline-block;
-    margin-right: 30px;
-    
-    &:last-child {
-        margin-right: 0;
-    }
     a {
         transition: all .5s ease-out;
         font-family: Roboto Light;
@@ -34,28 +23,25 @@
 
 
 .nav__links {
+    overflow: hidden;
+    margin-top: 0.5%;
     @media screen and (max-width: 425px) {
-        display: block;
-        transition: all 0.5s ease-out;
-        overflow: hidden;
-        position: absolute;
-        top: 100%;
-        left: 0;
+        transition: height 0.5s ease-out;
         background-color: #ffffff;
         width: 100%;
         height: 0px;
         .nav__link {
+            &:first-child {
+                margin-top: 30px;
+            }
             border-bottom: 2px solid #949494;
             display: block;
+            width: 100%;
             padding: 0;
             a {
-                font-size: 2rem;
+                font-size: 1rem;
             }
-            margin: {
-                left: 40px;
-                right: 40px;
-                bottom: 20px;
-            };
+            margin-bottom: 20px;
         }
 
     }
@@ -66,12 +52,11 @@
     @media screen and (max-width: 375px) {
         height: 240px;
     }
-    border-bottom: 2px solid #949494;
 }
 
 .nav .headline {
     @media screen and (max-width: 425px) {
-        font-size: 3rem
+        font-size: 2rem
     }
 }
 
@@ -81,7 +66,7 @@
         display: block;
     };
     width: 10%;
-    padding-bottom: 10%;
+    padding-bottom: 7%;
     background-image: url('../icons/menu/hide.svg');
     background-position: center;
     background-size: contain;
@@ -94,15 +79,13 @@
 
 }
 
-
 .nav_fixed {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: #ffffff;
-    width: 100%;
     box-shadow: 10px 0px 50px 5px #949494;
-    opacity: 0.97;
-    min-height: 72px;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
 }

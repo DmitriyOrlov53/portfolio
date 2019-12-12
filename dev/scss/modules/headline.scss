@@ -1,9 +1,6 @@
 .headline {
     font-weight: normal;
     font-family: Roboto Light;
-    box-sizing: content-box;
-    clear: both;
-
 }
 
 .headline__purple {
@@ -18,7 +15,6 @@
 
 
 .headline__white {
-    
     color: #ffffff;
 }
 
@@ -33,28 +29,23 @@
 }
 .headline_font-size_24 {
     font-size: 24/16*1rem;
-    @media screen and (max-width: 425px) {
-        font-size: 24/16*1.5rem;
-    };
 }
 .headline_font-size_20{
     font-size: 20/16*1rem;
-    @media screen and (max-width: 425px) {
-        font-size: 20/16*1.5rem;
-    };
 }
 
 .headline__angles {
     display: inline-block;
     position: relative;
+    word-wrap: break-word
 }
 
 .headline__angles::after {
     content: '';
     display: block;
     position: absolute;
-    width: 31px;
-    height: 30px;
+    width: 31px/$size*1rem;
+    height: 30px/$size*1rem;
     border: {
         top: 1px solid #9F449B;
         right: 1px solid #9F449B;
@@ -65,23 +56,24 @@
 .headline__angles::before {
     content: '';
     position: absolute;
-    width: 31px;
-    height: 30px;
+    width: 31px/$size*1rem;
+    height: 30px/$size*1rem;
     border: {
         bottom: 1px solid #9F449B;
         left: 1px solid #9F449B;
     }
     top: 100%;
-    left: -31px;
+    left: -41px;
 
 }
 
 .headline__paragraph {
     padding-top: 30px;
     margin: auto auto;
-    font-size: 28px;
+    font-size: 28px/16px*1rem;
 }
 
 .headline_align_center {
-    text-align: center
+    text-align: center;
+    width: 100%;
 }

@@ -48,7 +48,7 @@ function show_all_sections() {
                     elem.style.opacity = '1'
                     if (window.matchMedia('(max-width: 425px)').matches){
                         elem.style.width = '100%';
-                    }else elem.style.width = '30%';
+                    }else elem.style.width = '31.58813%';
                 }, 100)
             }
         )
@@ -77,7 +77,7 @@ function hide_another_sections(sectionName, anotherSections) {
         setTimeout(() => {
             if (window.matchMedia("(max-width: 425px)").matches){
                 elem.style.width = '100%';
-            }else elem.style.width = '30%';
+            }else elem.style.width = '31.58813%';
             elem.style.opacity = '1'
         }, 100)
     })
