@@ -13,22 +13,17 @@
     margin-bottom: 36px;
 }
 
-
-.contact__paragraph {
-    font-size: 18px/$size*1rem;
-    margin-bottom: 53px;
-}
-
 .contact__social {
-    align-items: center;
+    margin-top: 20px;
+    width: 100%;
     transition: all 0.5s ease-in-out;
-    >a {
         display: block;
-        width: 20%;
         cursor: pointer;
         > img {
-            width: 100%;
-        }
+            width: 8%;
+            float: left;
+            margin-right: 10px;
+            margin-top: -.7%;
         &:hover {
         transform: scale(1.2, 1.2);
     }};

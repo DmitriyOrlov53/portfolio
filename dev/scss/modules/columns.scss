@@ -59,13 +59,13 @@ $column_12: 12*$column_1 + 11*$margin*$n;
         left: $side_indent / $width_of_page * 100%;
         right: $side_indent / $width_of_page * 100%;
     };
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1440px) {
         padding: {
             left: $side_indent / $width_of_page * 100% / 2;
             right: $side_indent / $width_of_page * 100% / 2;
         };
     }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 1024px) {
         padding: {
             left: $side_indent / $width_of_page * 100% / 4;
             right: $side_indent / $width_of_page * 100% / 4;
@@ -75,12 +75,6 @@ $column_12: 12*$column_1 + 11*$margin*$n;
         padding: {
             left: $side_indent / $width_of_page * 100% / 6;
             right: $side_indent / $width_of_page * 100% / 6;
-        };
-    }
-    @media screen and (max-width: 320px) {
-        padding: {
-            left: 0;
-            right: 0;
         };
     }
     display: flex;

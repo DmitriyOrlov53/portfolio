@@ -1,9 +1,10 @@
-var nav = document.getElementsByClassName('nav')[0];
-var navSourceTop = nav.getBoundingClientRect().top + window.scrollY;
-var nav__menu = document.getElementsByClassName('nav__mobile-menu')[0];
-var nav__link = document.querySelectorAll('.nav__link a')
-var nav__links = document.getElementsByClassName('nav__links')[0];
-var inputs = document.getElementsByClassName('input')
+let nav = document.getElementsByClassName('nav')[0];
+let navSourceTop = nav.getBoundingClientRect().top + window.scrollY;
+let nav__menu = document.getElementsByClassName('nav__mobile-menu')[0];
+let nav__link = document.querySelectorAll('.nav__link a')
+let nav__links = document.getElementsByClassName('nav__links')[0];
+let inputs = document.getElementsByClassName('input');
+
 
 
 window.onscroll = function() {

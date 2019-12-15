@@ -19,13 +19,22 @@
 }
 
 .headline_font-size_90 {
-    font-size: 90/16*1rem
+    font-size: 90/16*1rem;
+    @media screen and (max-width: 425px) {
+        font-size: 90/16*.6rem; 
+    }
 }
 .headline_font-size_48 {
-    font-size: 48/16*1rem
+    font-size: 48/16*1rem;
+    @media screen and (max-width: 425px) {
+        font-size: 48/16*.6rem; 
+    }
 }
 .headline_font-size_30 {
-    font-size: 30/16*1rem
+    font-size: 30/16*1rem;
+    @media screen and (max-width: 425px) {
+        font-size: 30/16*.9rem; 
+    }
 }
 .headline_font-size_24 {
     font-size: 24/16*1rem;
@@ -63,7 +72,7 @@
         left: 1px solid #9F449B;
     }
     top: 100%;
-    left: -41px;
+    left: -31px;
 
 }
 
