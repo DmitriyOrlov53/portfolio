@@ -1,85 +1,62 @@
-const buttons = document.getElementsByClassName('my-portfolio__nav-button');
+const buttons = Array.from(document.getElementsByClassName('my-portfolio__nav-button'))
 const sections = ['all', 'sites', 'apps'];
-
-const sections2 = {'all': null, 'web': 'my-portfolio__web', 'apps': 'my-portfolio__apps'};
-
-for (i = 0; i < buttons.length; i++){
-    buttons[i].addEventListener('click', active_button);
-};
-
+const sections2 = {'all': null, 'sites': 'my-portfolio__sites', 'apps': 'my-portfolio__apps'};
+buttons.map(elem => elem.addEventListener('click', active_button));
 function active_button(event) {
-    var old_value = document.getElementsByClassName('button_cheked')[0];
+    let old_value = document.getElementsByClassName('button_cheked')[0];
     if (old_value != undefined && old_value.classList.remove('button_cheked') != event.target.classList) {
         old_value.classList.remove('buton_cheked');
         old_value.classList.add('button_focused')
     }
-    var new_value = event.target.classList;
-    event.target.classList.add('button_cheked');
-    event.target.classList.remove('button_focused');
-    selected_section(new_value)
+    let new_value = event.target.classList;
+    new_value.add('button_cheked');
+    new_value.remove('button_focused');
+    selected_section(Array.from(new_value));
 }
-
 function selected_section(value) {
-    var sectionName;
-    var anotherSections = [];
-    for (i = 0; i < value.length; i++) {
-        for (k = 0; k < sections.length; k++) {
-            if ( value[i] == sections[k]) {
-                sectionName = sections[k]
-                sections.forEach(elem => {
-                    if (elem !=sections[k]) anotherSections.push(elem)
-                })
+    let result = value.reduce((total, elem) => {
+        for (let key in sections2) {
+            if (elem == key) {
+                total.section_name = key;
+                for (let key2 in sections2) {
+                    if (sections2[key2] != sections2[total.section_name]) total.another_sections.push(sections2[key2]);
+                }
             }
         }
-    }
-
-    if (sectionName == 'all') show_all_sections();
-    else hide_another_sections(sectionName, anotherSections)
+        return total;
+    }, {section_name: '', another_sections: []});
+    console.log(result)
+    result.section_name == 'all' ? show_all_sections() : hide_another_sections(result);
 }
-
-
 function show_all_sections() {
-    for (i = 1; i < sections.length; i++) {
-        var elems = document.querySelectorAll('div.' + sections[i])
-        elems.forEach(
-            elem => {
-                elem.style.display = 'block'
-                setTimeout(() => {
-                    elem.style.opacity = '1'
-                    if (window.matchMedia('(max-width: 425px)').matches){
-                        elem.style.width = '100%';
-                    }else elem.style.width = '31.58813%';
-                }, 100)
-            }
-        )
+    for (let key in sections2) {
+        let elems = Array.from(document.getElementsByClassName(sections2[key]));
+        elems.forEach (elem => {
+            elem.style.display = 'block'
+            setTimeout(() => {
+                elem.style.opacity = '1'
+                window.matchMedia('(max-width: 425px)').matches ? elem.style.width = '100%' : elem.style.width = '31.58813%';
+            }, 100)
+        })
     }
 }
-
-function hide_another_sections(sectionName, anotherSections) {
-    var old_blocks = [];
-    anotherSections.forEach(elem => {
-        old_blocks.push(document.querySelectorAll('div.' + elem))
-    })
-
+function hide_another_sections(result) {
+    let old_blocks = result.another_sections.reduce((total, section) => {
+        let elements_of_section = Array.from(document.getElementsByClassName(section));
+        elements_of_section.forEach(elem => {total.push(elem)});
+        return total;
+    }, new Array)
     old_blocks.forEach(elem => {
-        elem.forEach(
-            subElem => {
-                subElem.style.opacity = '0'
-                subElem.style.width = '0%'
-                setTimeout(() => {subElem.style.display = 'none'}, 1000)
-            }
-        )
+        elem.style.opacity = '0'
+        elem.style.width = '0%'
+        setTimeout(() => {elem.style.display = 'none'}, 1000)
     })
-
-    var blocks = document.querySelectorAll('div.' + sectionName)
+    let blocks = Array.from(document.getElementsByClassName(sections2[result.section_name]))
     blocks.forEach(elem => {
-        elem.style.display = 'block'
         setTimeout(() => {
-            if (window.matchMedia("(max-width: 425px)").matches){
-                elem.style.width = '100%';
-            }else elem.style.width = '31.58813%';
+            elem.style.display = 'block'
+            window.matchMedia("(max-width: 425px)").matches ? elem.style.width = '100%' : elem.style.width = '31.58813%';
             elem.style.opacity = '1'
         }, 100)
     })
-
 }
