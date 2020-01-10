@@ -1,7 +1,6 @@
+const merge = require('webpack-merge');
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-module.exports = {
+const dev = {
     mode: 'development',
     target: 'web',
     devtool: 'eval',
@@ -13,32 +12,23 @@ module.exports = {
             poll: true
         }
     },
-
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: 'styles.css'
-        })
-    ],
-
-    entry: './configs/entry.js',
-    output: {
-        filename: 'script.js',
-        path: path.resolve(__dirname, '../build')
-    },
-
     module: {
         rules: [
             {
-                test: /\.scss$/,
+                test: /\.(scss|css)$/,
                 use: [
-                    'style-loader',
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: './',
+                            name: 'styles.css'
+                        }
+                    },
+                    'extract-loader',
                     'css-loader',
                     {   
                         loader: 'sass-loader',
-                        options: {
-                            implementation: require('node-sass')
-                        }
+                        options: {implementation: require('node-sass')}
                     }
                 ]
             },
@@ -51,10 +41,14 @@ module.exports = {
             },
             { //icons
                 test: /\.svg$/,
-                loader: 'file-loader',
-                options: {
-                    name: './icons/[name].svg',
-                }
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: './icons/[name].svg',
+                        }
+                    }
+                ]
             },
             {//fonts
                 test: /\.(ttf|otf)?$/,
@@ -63,13 +57,16 @@ module.exports = {
                   name: './fonts/[name].[ext]'
                 }
             },
-            {//html
+            {
                 test: /\.html$/,
                 use: [
-                        'file-loader?name=[name].[ext]',
-                        'extract-loader',
-                        'html-loader'
-                    ],
+                    {
+                        loader: 'file-loader',
+                        options: {name: './index.html'}
+                    },
+                    'extract-loader',
+                    'html-loader',
+                ]
             },
             {
                 test: /\.m?js$/,
@@ -79,10 +76,14 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         sourceMap: true,
-                        presets: ['@babel/preset-env']
                     }
                 }
             }
         ]
     }
 }
+module.exports = merge.multiple ([
+    merge(dev, require('./entries/index')),
+    merge(dev, require('./entries/calculator'))
+    ]
+)
