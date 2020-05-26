@@ -58,7 +58,7 @@
     };
     width: 10%;
     padding-bottom: 7%;
-    background-image: url('../icons/menu/hide.svg');
+    background-image: url('../../icons/menu/hide.svg');
     background-position: center;
     background-size: contain;
     background-color: transparent;
@@ -66,7 +66,7 @@
 }
 .nav__mobile-menu_active {
     filter: brightness(1);
-    background-image: url('../icons/menu/active.svg');
+    background-image: url('../../icons/menu/active.svg');
 
 }
 

@@ -1,11 +1,12 @@
 .header {
-    background-image: url('../fotos/banner.jpeg');
+    background-image: url('../../fotos/banner.jpeg');
     background-color: #00000057;
     background-blend-mode: color;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 83px;
     padding-bottom: 84px;
+    background-attachment: scroll;
     .section-logo {
         width: 42%;
     }
